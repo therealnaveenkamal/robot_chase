@@ -20,9 +20,17 @@ def generate_launch_description():
         arguments=['0', '0', '0', '0', '0', '0', 'world', 'rick/odom']
     )
 
-    
+    robot_chase_node = Node(
+        package='robot_chase',  
+        executable='robot_chase',
+        name='robot_chase',
+        output='screen',
+        emulate_tty=True,
+        parameters=[]
+    )
 
     return LaunchDescription([
         static_tf_morty,
-        static_tf_rick
+        static_tf_rick,
+        robot_chase_node
     ])

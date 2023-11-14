@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="robot_chase" type="robot_chase" name="robot_chase" output="screen"/>
+</launch>

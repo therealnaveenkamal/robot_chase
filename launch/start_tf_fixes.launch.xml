@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <include file="$(find-pkg-share robot_chase)/launch/publish_static_transform_odom_to_world.launch.py"/>
+
+    <node pkg="robot_chase" exec="chaser_publisher.py" name="chaser_publisher_node">
+    </node>
+
+    <node pkg="robot_chase" exec="move_generic_model.py" name="move_generic_model_node">
+    </node>
+
+</launch>

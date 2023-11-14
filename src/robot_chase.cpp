@@ -85,6 +85,8 @@ private:
      pid_angle =  std::min(max_angular_speed, std::max(-max_angular_speed,
      pid_angle));
 
+    RCLCPP_INFO(get_logger(), "P_DIST: %f ; P_ANG: %f", pid_distance,
+                pid_angle);
     geometry_msgs::msg::Twist cmd_vel;
     cmd_vel.angular.z = pid_angle;
     cmd_vel.linear.x = pid_distance;
